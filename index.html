@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+  <title>Angular2 demo by @Auth0</title>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <base href="/">
+  <!-- styles -->
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://cdn.rawgit.com/justindujardin/ng2-material/8ee9cee/dist/ng2-material.css" />
+  <link rel="stylesheet" href="https://cdn.rawgit.com/justindujardin/ng2-material/8ee9cee/dist/font.css" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="/node_modules/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" type="text/css" href="/src/assets/css/layout.css">
+  <!-- Util -->
+  <script type="text/javascript" src="/node_modules/jwt-decode/build/jwt-decode.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0-alpha1/jquery.js"></script>
+  <script src="https://cdn.rawgit.com/justindujardin/ng2-material/8ee9cee/node_modules/es6-shim/es6-shim.js"></script>
+
+
+
+</head>
+<body ng-cloak>
+
+  <auth-app ng-cloak>
+    Loading...
+  </auth-app>
+
+
+  <!-- Commmon files to be cached -->
+  <script src="/build/common.js"></script>
+  <!-- Angular2 files -->
+  <script src="/build/vendor.js"></script>
+  <!-- App script -->
+  <script src="/build/app.js"></script>
+
+<script type="text/javascript">
+  $( ".fa-desktop" ).click(function() {
+    console.log("clicked");
+    $("#fullscreen-toggle" ).toggleClass("container");
+  });
+
+  $( ".menu-list li" ).click(function() {
+    console.log("clicked");
+    $(".home" ).slideToggle();
+    $(".finance" ).slideToggle();
+    $(".menu-list li").removeClass("active");
+    $(this).toggleClass("active");
+  });
+
+  jQuery('img.svg').each(function(){
+    var $img = jQuery(this);
+    var imgID = $img.attr('id');
+    var imgClass = $img.attr('class');
+    var imgURL = $img.attr('src');
+
+    jQuery.get(imgURL, function(data) {
+      // Get the SVG tag, ignore the rest
+      var $svg = jQuery(data).find('svg');
+
+      // Add replaced image's ID to the new SVG
+      if(typeof imgID !== 'undefined') {
+        $svg = $svg.attr('id', imgID);
+      }
+      // Add replaced image's classes to the new SVG
+      if(typeof imgClass !== 'undefined') {
+        $svg = $svg.attr('class', imgClass+' replaced-svg');
+      }
+
+      // Remove any invalid XML tags as per http://validator.w3.org
+      $svg = $svg.removeAttr('xmlns:a');
+
+      // Replace image with new SVG
+      $img.replaceWith($svg);
+
+    }, 'xml');
+
+  });
+</script>
+</body>
+</html>

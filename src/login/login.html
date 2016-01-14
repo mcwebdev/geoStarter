@@ -1,0 +1,24 @@
+<div class="login-bg">
+<div class="login center-block">
+  <img src="/src/assets/images/logo.svg" alt="natgeo">
+
+  <form role="form" (submit)="login($event, username.value, password.value)">
+  <div class="form-group">
+    <label for="username">Username</label>
+    <input type="text" #username class="form-control" id="username" placeholder="Username">
+  </div>
+  <div class="form-group">
+    <label for="password">Password</label>
+    <input type="password" #password class="form-control" id="password" placeholder="Password">
+  </div>
+
+    <div class="text-center"><a href="/signup">Click here to Signup</a></div>
+    <div class="text-center">
+      <button type="submit" class="go-button">GO</button>
+
+    </div>
+</form>
+</div>
+
+</div>
+<div flex layout="row"><span flex="5"> </span> <div flex="50" class="channel-footer"> <img src="/src/assets/images/logo_square.svg" alt="natgeo" height="25"> national geographic channels</div><div flex="40" class="text-right"><div class="button">ngc stock image</div><div class="button">ngc music</div></div></div>

@@ -1,0 +1,286 @@
+<div>
+
+    <div layout="row" layout-align="end start">
+    <div class="welcome-user">Welcome,{{decodedJwt }}!</div>
+    <div>
+      <ul class="top-nav">
+        <li>MUSIC</li>
+        <li>Stock Footage</li>
+        <li><a class="" role="button" (click)="logout()">Logout</a></li>
+        <li><i class="fa fa-desktop"></i></li>
+      </ul>
+    </div>
+    </div>
+
+  <div layout="row">
+    <div flex="30"><img src="/src/assets/images/logo.svg" alt="natgeo" height="100" class="pull-logo"></div>
+    <div flex="70">
+      <ul class="sub-nav">
+      <li class="active">Information</li>
+      <li>Tutorials</li>
+      <li>My Account</li>
+    </ul>
+    </div>
+  </div>
+  <div layout="row">
+    <div flex="30" layout="column" class="boxWithHeight" layout-margin>
+      <section class="accordion">
+        <accordion-search flex layout="row" layout-align="center end">
+          <section id="search">
+            <label for="search-input"><i class="fa fa-search"></i></label>
+            <input id="search-input" class="form-control input-lg" placeholder="Search info" autocomplete="off" spellcheck="false" autocorrect="off" tabindex="1">
+            <a id="search-clear"  class="fa fa-times-circle"></a>
+          </section>
+        </accordion-search>
+        <accordion-content>
+        <div>
+          <input type="checkbox" id="check-1" />
+          <label for="check-1" layout="row" layout-align="center center">
+            <div flex="10">
+              <i class="fa fa-caret-right"></i>
+            </div>
+            <div flex="90">
+              <ul><li class="nav-label">contracting</li></ul>
+            </div>
+          </label>
+
+          <article>
+            <ul class="menu-list" layout="row" layout-wrap>
+              <li layout="column" flex="25" layout-align="center center">
+                <img class="svg" height="25" src="/src/assets/images/logo_square.svg"/>
+                <div>budget</div>
+              </li>
+              <li layout="column" flex="25" layout-align="center center"><img class="svg" height="25" src="/src/assets/images/logo_square.svg"/><div>production schedule</div></li>
+              <li layout="column" flex="25" layout-align="center center"><img class="svg" height="25" src="/src/assets/images/logo_square.svg"/><div>materials list</div></li>
+              <li layout="column" flex="25" layout-align="center center"><img class="svg" height="25" src="/src/assets/images/logo_square.svg"/><div>milestone schedule</div></li>
+              <li layout="column" flex="25" layout-align="center center"><img class="svg" height="25" src="/src/assets/images/logo_square.svg"/><div>technical specifications</div></li>
+              <li layout="column" flex="25" layout-align="center center"><img class="svg" height="25" src="/src/assets/images/logo_square.svg"/><div>clocks</div></li>
+              <li layout="column" flex="25" layout-align="center center"><img class="svg" height="25" src="/src/assets/images/logo_square.svg"/><div>camera selection</div></li>
+              <li layout="column" flex="25" layout-align="center center"><img class="svg" height="25" src="/src/assets/images/logo_square.svg"/><div>preferred vendors</div></li>
+              <li layout="column" flex="25" layout-align="center center"><img class="svg" height="25" src="/src/assets/images/logo_square.svg"/><div>talent </div></li>
+              <li layout="column" flex="25" layout-align="center center"><img class="svg" height="25" src="/src/assets/images/logo_square.svg"/><div>finance</div></li>
+            </ul>
+          </article>
+        </div>
+        <div>
+          <input type="checkbox" id="check-2" />
+
+          <label for="check-2" layout="row" layout-align="center center">
+            <div flex="10">
+              <i class="fa fa-caret-right"></i>
+            </div>
+            <div flex="90">
+              <ul><li>pre-production /</li><li>production</li></ul>
+            </div>
+          </label>
+          <article>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, doloremque maiores excepturi iste porro cumque rem praesentium illo labore error quasi magni cupiditate rerum sequi dolores architecto consectetur harum soluta neque placeat culpa nesciunt molestias quam facilis ipsum ab aspernatur ut similique aperiam nemo tempore earum esse repellat provident eum blanditiis tempora molestiae! Optio, asperiores neque nam reiciendis ad rerum.</p>
+          </article>
+        </div>
+        <div>
+          <input type="checkbox" id="check-3" />
+
+          <label for="check-3" layout="row" layout-align="center center">
+            <div flex="10">
+              <i class="fa fa-caret-right"></i>
+            </div>
+            <div flex="90">
+              <ul><li>post </li><li>production</li></ul>
+            </div>
+          </label>
+          <article>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, doloremque maiores excepturi iste porro cumque rem praesentium illo labore error quasi magni cupiditate rerum sequi dolores architecto consectetur harum soluta neque placeat culpa nesciunt molestias quam facilis ipsum ab aspernatur ut similique aperiam nemo tempore earum esse repellat provident eum blanditiis tempora molestiae! Optio, asperiores neque nam reiciendis ad rerum.</p>
+          </article>
+        </div>
+        <div>
+          <input type="checkbox" id="check-4" />
+          <label for="check-4" layout="row" layout-align="center center">
+            <div flex="10">
+              <i class="fa fa-caret-right"></i>
+            </div>
+            <div flex="90">
+              <ul><li>master</li><li>materials</li></ul>
+            </div>
+          </label>
+          <article>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, ipsum ratione eos voluptates unde ut sint maiores nobis iste odit. Maiores, voluptatum, dolorem, deleniti debitis est ea numquam nesciunt in rerum fuga neque quas laudantium quo laboriosam doloremque nemo ab itaque aliquid accusamus accusantium veritatis consectetur necessitatibus iure soluta blanditiis facere quam aperiam suscipit obcaecati voluptatem tempore delectus temporibus culpa! Repellendus, maiores at itaque soluta voluptatum est iusto dolor ex fuga animi debitis necessitatibus consectetur. Dignissimos, optio, saepe, quos dolorum pariatur voluptatum quasi eveniet ipsam fugit accusantium voluptate ducimus cupiditate ullam nostrum unde eaque necessitatibus maxime sunt incidunt aliquid accusamus.</p>
+          </article>
+        </div>
+        <div>
+          <input type="checkbox" id="check-5" />
+
+          <label for="check-5" layout="row" layout-align="center center">
+            <div flex="10">
+              <i class="fa fa-caret-right"></i>
+            </div>
+            <div flex="90">
+              <ul><li>project /</li><li>close-out</li></ul>
+            </div>
+          </label>
+          <article>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, ipsum ratione eos voluptates unde ut sint maiores nobis iste odit. Maiores, voluptatum, dolorem, deleniti debitis est ea numquam nesciunt in rerum fuga neque quas laudantium quo laboriosam doloremque nemo ab itaque aliquid accusamus accusantium veritatis consectetur necessitatibus iure soluta blanditiis facere quam aperiam suscipit obcaecati voluptatem tempore delectus temporibus culpa! Repellendus, maiores at itaque soluta voluptatum est iusto dolor ex fuga animi debitis necessitatibus consectetur. Dignissimos, optio, saepe, quos dolorum pariatur voluptatum quasi eveniet ipsam fugit accusantium voluptate ducimus cupiditate ullam nostrum unde eaque necessitatibus maxime sunt incidunt aliquid accusamus.</p>
+          </article>
+        </div>
+        <div>
+          <label layout="row" layout-align="center center">
+            <div flex="10">
+              <i class="fa fa-circle"></i>
+            </div>
+            <div flex="90">
+              <ul><li>preferred /</li><li>vendors a-z</li></ul>
+            </div>
+          </label>
+        </div>
+        <div>
+          <label layout="row" layout-align="center center">
+            <div flex="10">
+              <i class="fa fa-circle"></i>
+            </div>
+            <div flex="90">
+              <ul><li>guides /</li><li>templates a-z</li></ul>
+            </div>
+          </label>
+        </div>
+        <div>
+          <label layout="row" layout-align="center center" class="last-entry">
+            <div flex="10">
+              <i class="fa fa-circle"></i>
+            </div>
+            <div flex="90">
+              <ul><li>technical /</li><li>specifications</li></ul>
+            </div>
+          </label>
+          <!--<label for="check-6" layout="row"><div flex="1"><i class="fa fa-circle"></i></div> <div flex="2">technical / specifications</div></label>-->
+
+        </div>
+          </accordion-content>
+      </section>
+    </div>
+    <div flex="" layout="column" class="boxWithHeight" layout-margin>
+      <section>
+        <!--<my-app>
+          loading...
+        </my-app>-->
+
+        <div class="home jumbotron centered" layout-padding>
+          <div layout="row" layout-align="center center"><img class="svg svg-large" src="/src/assets/images/logo_square.svg"/></div>
+          <h2 *ngIf="jwt">Your JWT is:</h2>
+          <pre *ngIf="jwt" class="jwt"><code>{{ jwt }}</code></pre>
+          <pre *ngIf="jwt" class="jwt"><code>{{ decodedJwt | json }}</code></pre>
+          <p>Click any of the buttons to call an API and get a response</p>
+
+          <p><a class="btn btn-primary btn-lg" role="button" (click)="callAnonymousApi()">Call Anonymous API</a></p>
+
+          <p><a class="btn btn-primary btn-lg" role="button" (click)="callSecuredApi()">Call Secure API</a></p>
+
+          <p><a class="btn btn-primary btn-lg" role="button" (click)="logout()">Logout</a></p>
+
+          <h2 *ngIf="response">The response of calling the <span class="red">{{api}}</span> API is:</h2>
+
+          <h3 *ngIf="response">{{response}}</h3>
+        </div>
+
+
+        <div class="finance centered" layout-padding style="display: none;">
+          <div class="accordion-header" layout="row"  layout-align="center center">
+            <div flex="50" class="accordion-header-label">Finance </div>
+            <button flex="35">DOWNLOAD PACKAGE <span>22.5 Mb</span></button>
+            <div flex="15" class="text-center controls">
+            <i class="fa fa-caret-left"></i>  <i class="fa fa-caret-right"></i>  <i class="fa fa-close"></i>
+            </div>
+          </div>
+          <article layout="row" class="article-content">
+            <p flex="50">estias quam facilis ipsum ab aspernatur ut similique aperiam nemo tempore earum esse repellat provident eum blanditiis
+              tempora molestiae! Optio, asperiores neque nam reiciendis ad rerum.</p>
+            <p flex="50">estias quam facilis ipsum ab aspernatur ut similique aperiam nemo tempore earum esse repellat provident eum blanditiis
+              tempora molestiae! Optio, asperiores neque nam reiciendis ad rerum.</p>
+          </article>
+          <section class="accordion">
+            <accordion-content>
+              <div>
+                <input type="checkbox" id="finance-check-1" />
+                <label for="finance-check-1" layout="row" layout-align="center center">
+                  <div flex="5">
+                    <i class="fa fa-caret-right"></i>
+                  </div>
+                  <div flex="95">
+                    <ul><li class="nav-label">contracting</li></ul>
+                  </div>
+                </label>
+
+                <article>
+                  <p flex="50">estias quam facilis ipsum ab aspernatur ut similique aperiam nemo tempore earum esse repellat provident eum blanditiis
+                    tempora molestiae! Optio, asperiores neque nam reiciendis ad rerum.</p>
+                </article>
+              </div>
+              <div>
+                <input type="checkbox" id="finance-check-2" />
+
+                <label for="finance-check-2" layout="row" layout-align="center center">
+                  <div flex="5">
+                    <i class="fa fa-caret-right"></i>
+                  </div>
+                  <div flex="95">
+                    <ul><li>pre-production /</li><li>production</li></ul>
+                  </div>
+                </label>
+                <article>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, doloremque maiores excepturi iste porro cumque rem praesentium illo labore error quasi magni cupiditate rerum sequi dolores architecto consectetur harum soluta neque placeat culpa nesciunt molestias quam facilis ipsum ab aspernatur ut similique aperiam nemo tempore earum esse repellat provident eum blanditiis tempora molestiae! Optio, asperiores neque nam reiciendis ad rerum.</p>
+                </article>
+              </div>
+              <div>
+                <input type="checkbox" id="finance-check-3" />
+
+                <label for="finance-check-3" layout="row" layout-align="center center">
+                  <div flex="5">
+                    <i class="fa fa-caret-right"></i>
+                  </div>
+                  <div flex="95">
+                    <ul><li>post </li><li>production</li></ul>
+                  </div>
+                </label>
+                <article>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Unde, doloremque maiores excepturi iste porro cumque rem praesentium illo labore error quasi magni cupiditate rerum sequi dolores architecto consectetur harum soluta neque placeat culpa nesciunt molestias quam facilis ipsum ab aspernatur ut similique aperiam nemo tempore earum esse repellat provident eum blanditiis tempora molestiae! Optio, asperiores neque nam reiciendis ad rerum.</p>
+                </article>
+              </div>
+              <div>
+                <input type="checkbox" id="finance-check-4" />
+                <label for="finance-check-4" layout="row" layout-align="center center">
+                  <div flex="5">
+                    <i class="fa fa-caret-right"></i>
+                  </div>
+                  <div flex="95">
+                    <ul><li>master</li><li>materials</li></ul>
+                  </div>
+                </label>
+                <article>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, ipsum ratione eos voluptates unde ut sint maiores nobis iste odit. Maiores, voluptatum, dolorem, deleniti debitis est ea numquam nesciunt in rerum fuga neque quas laudantium quo laboriosam doloremque nemo ab itaque aliquid accusamus accusantium veritatis consectetur necessitatibus iure soluta blanditiis facere quam aperiam suscipit obcaecati voluptatem tempore delectus temporibus culpa! Repellendus, maiores at itaque soluta voluptatum est iusto dolor ex fuga animi debitis necessitatibus consectetur. Dignissimos, optio, saepe, quos dolorum pariatur voluptatum quasi eveniet ipsam fugit accusantium voluptate ducimus cupiditate ullam nostrum unde eaque necessitatibus maxime sunt incidunt aliquid accusamus.</p>
+                </article>
+              </div>
+              <div>
+                <input type="checkbox" id="finance-check-5" />
+
+                <label for="finance-check-5" layout="row" layout-align="center center">
+                  <div flex="5">
+                    <i class="fa fa-caret-right"></i>
+                  </div>
+                  <div flex="95">
+                    <ul><li>project /</li><li>close-out</li></ul>
+                  </div>
+                </label>
+                <article>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel, ipsum ratione eos voluptates unde ut sint maiores nobis iste odit. Maiores, voluptatum, dolorem, deleniti debitis est ea numquam nesciunt in rerum fuga neque quas laudantium quo laboriosam doloremque nemo ab itaque aliquid accusamus accusantium veritatis consectetur necessitatibus iure soluta blanditiis facere quam aperiam suscipit obcaecati voluptatem tempore delectus temporibus culpa! Repellendus, maiores at itaque soluta voluptatum est iusto dolor ex fuga animi debitis necessitatibus consectetur. Dignissimos, optio, saepe, quos dolorum pariatur voluptatum quasi eveniet ipsam fugit accusantium voluptate ducimus cupiditate ullam nostrum unde eaque necessitatibus maxime sunt incidunt aliquid accusamus.</p>
+                </article>
+              </div>
+            </accordion-content>
+          </section>
+        </div>
+
+
+      </section>
+<!--      <section flex="20">flex="20"</section>
+      <section flex>flex</section>-->
+    </div>
+  </div>
+
+</div>
