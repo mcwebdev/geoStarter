@@ -20,9 +20,11 @@ export class Home {
   jwt: string;
   decodedJwt: string;
   response: string;
+  username: string;
   api: string;
 
   constructor(public router: Router, public http: Http, public authHttp: AuthHttp) {
+
     this.jwt = localStorage.getItem('jwt');
     this.decodedJwt = this.jwt && window.jwt_decode(this.jwt);
   }

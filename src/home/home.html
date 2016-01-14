@@ -1,12 +1,12 @@
 <div>
 
   <div layout="row" layout-align="end start">
-    <div class="welcome-user">Welcome,{{decodedJwt }}!</div>
+    <div class="welcome-user">Welcome, {{ decodedJwt.username }}!</div>
     <div>
       <ul class="top-nav">
-        <li>MUSIC</li>
-        <li>Stock Footage</li>
-        <li><a class="" role="button" (click)="logout()">Logout</a></li>
+        <li>MUSIC <i class="fa fa-music"></i></li>
+        <li>Stock Footage <i class="fa fa-film"></i></li>
+        <li><a class="" role="button" (click)="logout()">Logout <i class="fa fa-power-off"></i></a></li>
         <li><i class="fa fa-desktop"></i></li>
       </ul>
     </div>
@@ -25,7 +25,7 @@
   <div layout="row">
     <div flex="30" layout="column" layout-margin>
       <section class="accordion">
-        <accordion-search flex layout="row" layout-align="center end">
+        <accordion-search flex layout="row" layout-align="end end">
           <section id="search">
             <label for="search-input"><i class="fa fa-search"></i></label>
             <input id="search-input" class="form-control input-lg" placeholder="Search info" autocomplete="off"
@@ -50,52 +50,52 @@
             <article>
               <ul class="menu-list" layout="row" layout-wrap>
                 <li layout="column" flex="25" layout-align="center center">
-                  <img class="svg" height="25" src="/src/assets/images/logo_square.svg"/>
+                  <div class="icon-logo_square">&nbsp;</div>
 
                   <div>budget</div>
                 </li>
-                <li layout="column" flex="25" layout-align="center center"><img class="svg" height="25"
-                                                                                src="/src/assets/images/logo_square.svg"/>
+                <li layout="column" flex="25" layout-align="center center">
+                  <div class="icon-logo_square">&nbsp;</div>
 
                   <div>production schedule</div>
                 </li>
-                <li layout="column" flex="25" layout-align="center center"><img class="svg" height="25"
-                                                                                src="/src/assets/images/logo_square.svg"/>
+                <li layout="column" flex="25" layout-align="center center">
+                  <div class="icon-logo_square">&nbsp;</div>
 
                   <div>materials list</div>
                 </li>
-                <li layout="column" flex="25" layout-align="center center"><img class="svg" height="25"
-                                                                                src="/src/assets/images/logo_square.svg"/>
+                <li layout="column" flex="25" layout-align="center center">
+                  <div class="icon-logo_square">&nbsp;</div>
 
                   <div>milestone schedule</div>
                 </li>
-                <li layout="column" flex="25" layout-align="center center"><img class="svg" height="25"
-                                                                                src="/src/assets/images/logo_square.svg"/>
+                <li layout="column" flex="25" layout-align="center center">
+                  <div class="icon-logo_square">&nbsp;</div>
 
                   <div>technical specifications</div>
                 </li>
-                <li layout="column" flex="25" layout-align="center center"><img class="svg" height="25"
-                                                                                src="/src/assets/images/logo_square.svg"/>
+                <li layout="column" flex="25" layout-align="center center">
+                  <div class="icon-logo_square">&nbsp;</div>
 
                   <div>clocks</div>
                 </li>
-                <li layout="column" flex="25" layout-align="center center"><img class="svg" height="25"
-                                                                                src="/src/assets/images/logo_square.svg"/>
+                <li layout="column" flex="25" layout-align="center center">
+                  <div class="icon-logo_square">&nbsp;</div>
 
                   <div>camera selection</div>
                 </li>
-                <li layout="column" flex="25" layout-align="center center"><img class="svg" height="25"
-                                                                                src="/src/assets/images/logo_square.svg"/>
+                <li layout="column" flex="25" layout-align="center center">
+                  <div class="icon-logo_square">&nbsp;</div>
 
                   <div>preferred vendors</div>
                 </li>
-                <li layout="column" flex="25" layout-align="center center"><img class="svg" height="25"
-                                                                                src="/src/assets/images/logo_square.svg"/>
+                <li layout="column" flex="25" layout-align="center center">
+                  <div class="icon-logo_square">&nbsp;</div>
 
                   <div>talent</div>
                 </li>
-                <li layout="column" flex="25" layout-align="center center"><img class="svg" height="25"
-                                                                                src="/src/assets/images/logo_square.svg"/>
+                <li layout="column" flex="25" layout-align="center center">
+                  <div class="icon-logo_square">&nbsp;</div>
 
                   <div>finance</div>
                 </li>
@@ -246,11 +246,10 @@
         </my-app>-->
 
         <div class="home jumbotron centered boxWithHeight" layout-padding>
-          <div layout="row" layout-align="center center"><img class="svg svg-large"
-                                                              src="/src/assets/images/logo_square.svg"/></div>
+          <div layout="row" layout-align="center center"><span class="icon-logo_square large">&nbsp;</span></div>
           <h2 *ngIf="jwt">Your JWT is:</h2>
           <pre *ngIf="jwt" class="jwt"><code>{{ jwt }}</code></pre>
-          <pre *ngIf="jwt" class="jwt"><code>{{ decodedJwt | json }}</code></pre>
+          <pre *ngIf="jwt" class="jwt"><code>{{ decodedJwt | json }} {{profile }}{{username }}</code></pre>
           <p>Click any of the buttons to call an API and get a response</p>
 
           <p><a class="btn btn-primary btn-lg" role="button" (click)="callAnonymousApi()">Call Anonymous API</a></p>
@@ -292,7 +291,9 @@
                   </div>
                   <div flex="95">
                     <ul>
-                      <li class="nav-label" layout="row" layout-align="start center"><span flex="50">NGC-US Finance Documents </span><button flex="35" class="download">DOWNLOAD GROUP <span>22.5 Mb</span></button></li>
+                      <li class="nav-label" layout="row" layout-align="start center"><span flex="50">NGC-US Finance Documents </span>
+                        <button flex="35" class="download">DOWNLOAD GROUP <span>22.5 Mb</span></button>
+                      </li>
                     </ul>
                   </div>
                 </label>
@@ -308,7 +309,9 @@
                         </div>
                         <div flex="95">
                           <ul>
-                            <li class="nav-label" layout="row" layout-align="start center"><span flex="50">NGC-US Finance Documents </span><button flex="35" class="download">DOWNLOAD GROUP <span>22.5 Mb</span></button></li>
+                            <li class="nav-label" layout="row" layout-align="start center"><span flex="50">NGC-US Finance Documents </span>
+                              <button flex="35" class="download">DOWNLOAD GROUP <span>22.5 Mb</span></button>
+                            </li>
                           </ul>
                         </div>
                       </label>
@@ -328,7 +331,9 @@
                         </div>
                         <div flex="95">
                           <ul>
-                            <li class="nav-label" layout="row" layout-align="start center"><span flex="50">NGC-US Finance Documents </span><button flex="35" class="download">DOWNLOAD GROUP <span>22.5 Mb</span></button></li>
+                            <li class="nav-label" layout="row" layout-align="start center"><span flex="50">NGC-US Finance Documents </span>
+                              <button flex="35" class="download">DOWNLOAD GROUP <span>22.5 Mb</span></button>
+                            </li>
                           </ul>
                         </div>
                       </label>
@@ -353,7 +358,9 @@
                   </div>
                   <div flex="95">
                     <ul>
-                      <li class="nav-label" layout="row" layout-align="start center"><span flex="50">NGC-US Finance Documents </span><button flex="35" class="download">DOWNLOAD GROUP <span>22.5 Mb</span></button></li>
+                      <li class="nav-label" layout="row" layout-align="start center"><span flex="50">NGC-US Finance Documents </span>
+                        <button flex="35" class="download">DOWNLOAD GROUP <span>22.5 Mb</span></button>
+                      </li>
                     </ul>
                   </div>
                 </label>
@@ -372,7 +379,9 @@
                   </div>
                   <div flex="95">
                     <ul>
-                      <li class="nav-label" layout="row" layout-align="start center"><span flex="50">NGC-US Finance Documents </span><button flex="35" class="download">DOWNLOAD GROUP <span>22.5 Mb</span></button></li>
+                      <li class="nav-label" layout="row" layout-align="start center"><span flex="50">NGC-US Finance Documents </span>
+                        <button flex="35" class="download">DOWNLOAD GROUP <span>22.5 Mb</span></button>
+                      </li>
                     </ul>
                   </div>
                 </label>
@@ -392,7 +401,9 @@
                   </div>
                   <div flex="95">
                     <ul>
-                      <li class="nav-label" layout="row" layout-align="start center"><span flex="50">NGC-US Finance Documents </span><button flex="35" class="download">DOWNLOAD GROUP <span>22.5 Mb</span></button></li>
+                      <li class="nav-label" layout="row" layout-align="start center"><span flex="50">NGC-US Finance Documents </span>
+                        <button flex="35" class="download">DOWNLOAD GROUP <span>22.5 Mb</span></button>
+                      </li>
                     </ul>
                   </div>
                 </label>
@@ -416,7 +427,9 @@
                   </div>
                   <div flex="95">
                     <ul>
-                      <li class="nav-label" layout="row" layout-align="start center"><span flex="50">NGC-US Finance Documents </span><button flex="35" class="download">DOWNLOAD GROUP <span>22.5 Mb</span></button></li>
+                      <li class="nav-label" layout="row" layout-align="start center"><span flex="50">NGC-US Finance Documents </span>
+                        <button flex="35" class="download">DOWNLOAD GROUP <span>22.5 Mb</span></button>
+                      </li>
                     </ul>
                   </div>
                 </label>

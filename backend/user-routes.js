@@ -32,6 +32,8 @@ app.post('/users', function(req, res) {
   res.status(201).send({
     id_token: createToken(profile)
   });
+
+
 });
 
 app.post('/sessions/create', function(req, res) {

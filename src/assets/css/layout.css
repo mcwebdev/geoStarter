@@ -10,7 +10,7 @@ input:-webkit-autofill, input:active:-webkit-autofill, .form-control:focus, text
 .container{ height: 100%;}
 .login-bg{ background: url("/src/assets/images/bg.jpg"); background-size: cover; height: 90%; margin: 20px; border-radius: 25px;}
 .signup-bg{ background: url("/src/assets/images/bg5.jpg"); background-size: cover; height: 90%; margin: 20px; border-radius: 25px;}
-.home.jumbotron { background: url("/src/assets/images/bg3.jpg"); background-size: cover; border-radius: 30px; }
+.home.jumbotron { background: url("/src/assets/images/bg3.jpg"); background-size: cover; border-radius: 30px;  }
 input.form-control { background: #000; border: 2px grey solid; border-radius: 15px;  padding: 25px 15px;}
 .button{ text-transform: uppercase; padding: 5px 10px; border: solid 1px yellow; color: yellow; display: inline-block; margin-right: 20px;}
 .channel-footer{ color: #fff; text-transform: uppercase;}
@@ -19,9 +19,10 @@ input.form-control { background: #000; border: 2px grey solid; border-radius: 15
   -moz-box-shadow: inset 0px -116px 200px -55px rgba(0,0,0,0.75);
   box-shadow: inset 0px -116px 200px -55px rgba(0,0,0,0.75);
    }
-.top-nav{ background: #656565; padding: 10px; border-radius: 0 0 0 20px;}
-.top-nav li{ padding: 8px; text-transform: uppercase; display: inline; color: #ccc;}
+.top-nav{ background: #656565; padding: 8px; border-radius: 0 0 0 20px;}
+.top-nav li{ padding: 8px; text-transform: uppercase; display: inline; color: #ccc; border-right: solid 1px #1c1c1c;}
 .top-nav a{ color: #ccc; text-decoration: none;}
+.top-nav i { margin-left: 5px; margin-right: 5px;}
 .sub-nav{ padding: 0; position: relative; left: 50px;}
 .sub-nav li{ display: inline; color: #fff; font-size: 18px; text-transform: uppercase; padding-bottom: 5px; border-bottom: solid 5px transparent; margin-right: 25px;}
 .sub-nav li.active{border-bottom: solid 5px yellow;}
@@ -30,7 +31,7 @@ input.form-control { background: #000; border: 2px grey solid; border-radius: 15
 .menu-list{ padding: 0; margin: 10px;}
 .menu-list li{ list-style: none; padding: 8px; cursor: pointer;}
 .menu-list li div { text-align: center;  min-height: 45px;  padding: 8px; text-transform: uppercase; font-size: .8em; font-weight: 600;}
-pre{ opacity: .95;}
+pre{ opacity: .95; }
 
 svg-image path{ fill: #ffd630; width: 50px; height: 50px;}
 .brand path{ fill: #ffd630;}
@@ -39,9 +40,10 @@ svg-image path{ fill: #ffd630; width: 50px; height: 50px;}
 
 
 .svg{ height: 45px; fill: #ffd630;}
-.svg-large{  height: auto;}
+.icon-logo_square.large:before {  font-size: 10em;}
 .svg-small{  height: 25px; width: inherit;}
-.menu-list svg:hover path,  .active svg path{  fill: black;}
+.icon-logo_square{  color: #ffd630;}
+.menu-list .icon-logo_square:hover,  .active .icon-logo_square{  color: black;}
 
 .boxWithHeight, home {
   box-sizing: border-box;
@@ -80,8 +82,8 @@ svg-image path{ fill: #ffd630; width: 50px; height: 50px;}
 
 .article-content{ background: #ffffff; border-top: solid 1px #a6a6a8; color: #000; padding: 25px;}
 
-accordion-search{width: 100%;  height: 250px;  display: block; background: url("/src/assets/images/bg4.jpg");background-size: contain;  border-radius: 25px 25px 0 0;background-repeat: no-repeat;background-position: center;}
-accordion-search input.form-control { background: #d7d7d7; text-transform: uppercase; margin-bottom: 8px; }
+accordion-search{ width: 100%;  height: 250px;  display: block; background: url("/src/assets/images/bg4.jpg");background-size: contain;  border-radius: 25px 25px 0 0;background-repeat: no-repeat;background-position: center;}
+accordion-search input.form-control { background: rgba(204, 204, 204, 0.85); text-transform: uppercase; margin-bottom: 8px; }
 .accordion label.last-entry{ border-radius: 0 0 25px 25px; overflow: hidden; }
 .accordion input[type="checkbox"] {
   display: none;
@@ -176,14 +178,14 @@ input[type="search"] {
 #search {
   position: relative;
   font-size: 18px;
-  padding-top: 37px;
-  margin: -20px auto 0px;
+  padding: 5px 10px 0 10px;
   width: 100%;
+  background: rgba(70, 70, 70, 0.90);
 }
 #search label {
   position: absolute;
-  left: 17px;
-  top: 51px;
+  left: 25px;
+  top: 20px;
 }
 #search #search-input,
 #search .hint {
@@ -197,9 +199,9 @@ input[type="search"] {
 #search #search-clear {
   text-decoration: none;
   position: absolute;
-  right: 18px;
-  top: 54px;
-  color: #b3b3b3;
+  right: 25px;
+  top: 25px;
+  color: #777;
 }
 #search #search-clear:hover {
   color: #8f8f8f;
