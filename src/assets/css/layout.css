@@ -1,4 +1,8 @@
 html, body { height: 100%; width: 100%; margin: 0; overflow: auto;font-family: 'Open Sans', sans-serif; }
+html, body {
+  min-height: 100% !important;
+  height: 100%;
+}
 body {background: #1a1a1a; color: #fff; overflow-y:scroll; }
 a{ color: #fff; text-decoration: underline; text-transform: uppercase;}
 a:hover{ color: #fff; text-decoration: none; }
@@ -24,7 +28,7 @@ input.form-control { background: #000; border: 2px grey solid; border-radius: 15
 .pull-logo{ margin-top: -30px;}
 .menu-list{ padding: 0; margin: 10px;}
 .menu-list li{ list-style: none; padding: 8px; cursor: pointer;}
-.menu-list li div { text-align: center;  min-height: 65px;  padding: 8px; text-transform: uppercase; font-size: .8em; font-weight: 600;}
+.menu-list li div { text-align: center;  min-height: 45px;  padding: 8px; text-transform: uppercase; font-size: .8em; font-weight: 600;}
 pre{ opacity: .95;}
 
 svg-image path{ fill: #ffd630; width: 50px; height: 50px;}
@@ -33,11 +37,12 @@ svg-image path{ fill: #ffd630; width: 50px; height: 50px;}
 .active img path{ fill:#000;}
 
 
-.svg{ height: 25px; fill: #ffd630;}
+.svg{ height: 45px; fill: #ffd630;}
 .svg-large{  height: auto;}
+.svg-small{  height: 25px; width: inherit;}
 .menu-list svg:hover path,  .active svg path{  fill: black;}
 
-.boxWithHeight {
+.boxWithHeight, home {
   box-sizing: border-box;
   height: 100%;
 }
@@ -107,9 +112,10 @@ accordion-search input.form-control { background: #d7d7d7; text-transform: upper
 }
 .accordion article {
   background: #f7f7f7;
-  height:0px;
   overflow:hidden;
   z-index:10;
+  max-height: 0;
+  transition: max-height .35s ease-out;
 }
 .accordion article p {
   padding: 1em;
@@ -119,8 +125,10 @@ accordion-search input.form-control { background: #d7d7d7; text-transform: upper
 .accordion accordion-content input:checked ~ article {
   border-bottom-left-radius: .25em;
   border-bottom-right-radius: .25em;
-  height: auto;
   margin-bottom: .125em;
+  height: auto;
+  max-height: 500px;
+  transition: max-height .40s ease-in;
 }
 .accordion .fa-circle{ font-size: .75em}
 .accordion .fa-caret-right{ font-size: 2em;}
@@ -130,9 +138,35 @@ accordion-search input.form-control { background: #d7d7d7; text-transform: upper
 
 .accordion-header{ background: #fbd902; color: #000000; text-transform: uppercase; padding: 15px; border-radius: 25px 25px 0 0;}
 .accordion-header button{ background: #eac902; border: none; padding: 8px;}
+button.download{ background: #dfdfdf; border: none; padding: 8px;}
 .accordion-header .controls{ font-size: 1.5em;}
 
 .accordion-header-label{ font-size: 2em;}
+.inner-accordion div.sub-item:nth-child(odd) , .inner-accordion div.sub-item:nth-child(odd) label{ background: #e8e8e8;}
+.inner-accordion div.sub-item:nth-child(even){ background: #d8d8d8;}
+.inner-accordion{ background: #464646; padding-top: 3px;}
+.radius-top{ border-radius: 25px 25px 0 0; overflow: auto;}
+.radius-bottom{ border-radius: 0 0 25px 25px; overflow: auto;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 input[type="search"] {
