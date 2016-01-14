@@ -9,6 +9,7 @@ a:hover{ color: #fff; text-decoration: none; }
 input:-webkit-autofill, input:active:-webkit-autofill, .form-control:focus, textarea:-webkit-autofill, select:-webkit-autofill{ -webkit-box-shadow: 0 0 0px 1000px black inset; -webkit-text-fill-color: #fff !important;}
 .container{ height: 100%;}
 .login-bg{ background: url("/src/assets/images/bg.jpg"); background-size: cover; height: 90%; margin: 20px; border-radius: 25px;}
+.signup-bg{ background: url("/src/assets/images/bg5.jpg"); background-size: cover; height: 90%; margin: 20px; border-radius: 25px;}
 .home.jumbotron { background: url("/src/assets/images/bg3.jpg"); background-size: cover; border-radius: 30px; }
 input.form-control { background: #000; border: 2px grey solid; border-radius: 15px;  padding: 25px 15px;}
 .button{ text-transform: uppercase; padding: 5px 10px; border: solid 1px yellow; color: yellow; display: inline-block; margin-right: 20px;}
@@ -47,7 +48,7 @@ svg-image path{ fill: #ffd630; width: 50px; height: 50px;}
   height: 100%;
 }
 
-
+.text-center a { background: #12322b; padding: 8px; border-radius: 6px; opacity: .7; color:#ffd630; font-weight: bold; position: relative; top: 8px;  }
 
 
 
