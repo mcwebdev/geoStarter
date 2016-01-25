@@ -1,0 +1,20 @@
+<div class="accordion-panel" [ngClass]="{'panel-open': isOpen}">
+  <div class="accordion-panel-heading" (click)="toggleOpen($event)" layout="row" layout-align="center center">
+
+    <div flex="10">
+      <i class="fa fa-caret-right"></i>
+    </div>
+    <div flex="90">
+      <ul>
+        <li class="nav-label">{{subHeading}}</li>
+        <li class="nav-label">{{heading}}</li>
+      </ul>
+    </div>
+
+  </div>
+  <div class="panel-collapse" [hidden]="!isOpen">
+    <div class="panel-body">
+	    <ng-content></ng-content>
+    </div>
+  </div>
+</div>

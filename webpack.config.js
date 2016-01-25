@@ -94,13 +94,13 @@ module.exports = {
     new CommonsChunkPlugin({ name: 'vendor', filename: 'vendor.js', minChunks: Infinity }),
     new CommonsChunkPlugin({ name: 'common', filename: 'common.js', minChunks: 2, chunks: ['app', 'vendor'] })
   ],
-  
+
   // Other module loader config
   tslint: {
     emitErrors: false,
     failOnHint: false
   },
-  
+
   // our Development Server configs
   // our Webpack Development Server config
   devServer: {

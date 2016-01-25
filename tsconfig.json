@@ -8,9 +8,11 @@
     "sourceMap": true
   },
   "files": [
-    "typings/tsd.d.ts",  
+    "typings/tsd.d.ts",
     "src/app/app.ts",
     "src/home/home.ts",
+    "src/components/sidenav-accordion/app.ts",
+    "src/components/content-accordion/app.ts",
     "src/login/login.ts",
     "src/signup/signup.ts",
     "src/index.ts",

@@ -1,0 +1,25 @@
+
+<accordion close-others="true">
+<!--dynamic groups -->
+  <accordion-group [heading]="group.heading" [subHeading]="group.subHeading" *ngFor="#group of groups">
+    <ul class="menu-list" layout="row" layout-wrap>
+      <li layout="column" flex="25" layout-align="center center" *ngFor="#link of links">
+        <div class="icon-logo_square">&nbsp;</div>
+
+        <div>{{link.content}}</div>
+      </li>
+    </ul>
+  </accordion-group>
+<!--static groups -->
+  <accordion-group class="no-content vendors" subHeading="preferred" heading="vendors a-z" is-open="true">
+
+  </accordion-group>
+
+  <accordion-group class="no-content" subHeading="guides /" heading="templates a-z" [is-open]="isOpen">
+
+  </accordion-group>
+
+  <accordion-group class="no-content" subHeading="technical" heading="specifications" [is-open]="isOpen">
+
+  </accordion-group>
+</accordion>

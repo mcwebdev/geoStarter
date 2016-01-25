@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="">
 <head>
-  <title>Angular2 demo by @Auth0</title>
+  <title>NAT GEO</title>
 
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,6 +11,7 @@
   <base href="/">
   <!-- styles -->
   <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+  <link data-require="bootstrap-css@*" data-semver="3.3.1" rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" />
   <link rel="stylesheet" href="https://cdn.rawgit.com/justindujardin/ng2-material/8ee9cee/dist/ng2-material.css" />
   <link rel="stylesheet" href="https://cdn.rawgit.com/justindujardin/ng2-material/8ee9cee/dist/font.css" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
@@ -44,6 +45,24 @@
     console.log("clicked");
     $("#fullscreen-toggle" ).toggleClass("container");
   });
+
+
+  $( ".accordion" ).on( "click", ".menu-list li", function() {
+    $(".home" ).slideToggle();
+    $(".finance" ).slideToggle();
+    $(".menu-list li").removeClass("active");
+    $(this).toggleClass("active");
+    console.log( $( this ).text() );
+  });
+
+  $( ".accordion" ).on( "click", ".vendors", function() {
+    $(".home" ).slideToggle();
+    $(".preferred-vendors" ).slideToggle();
+    $(".menu-list li").removeClass("active");
+    $(this).toggleClass("active");
+    console.log( $( this ).text() );
+  });
+
 
   $( ".menu-list li" ).click(function() {
     console.log("clicked");

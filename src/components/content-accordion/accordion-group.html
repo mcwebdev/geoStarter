@@ -1,0 +1,49 @@
+<div class="accordion-panel" [ngClass]="{'panel-open': isOpen}">
+  <div class="accordion-panel-heading" layout="row" layout-align="center center">
+
+    <div flex="5" (click)="toggleOpen($event)">
+      <i class="fa fa-caret-right"></i>
+    </div>
+    <div flex="95">
+      <ul>
+        <li class="nav-label" layout="row" layout-align="start center"><span flex="50" (click)="toggleOpen($event)">{{heading}} </span>
+          <button flex="35" class="download">DOWNLOAD GROUP <span>22.5 Mb</span></button>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+  <div class="panel-collapse" [hidden]="!isOpen">
+    <div class="panel-body">
+	    <ng-content></ng-content>
+    </div>
+  </div>
+</div>
+
+
+
+<!--<accordion close-others="true">
+  &lt;!&ndash;dynamic groups &ndash;&gt;
+
+  <accordion-group [heading]="group.heading" [subHeading]="group.subHeading" *ngFor="#group of groups">
+  <input type="checkbox" id="finance-check-2"/>
+
+  <label for="finance-check-2" layout="row" layout-align="center center">
+    <div flex="5">
+      <i class="fa fa-caret-right"></i>
+    </div>
+    <div flex="95">
+      <ul>
+        <li class="nav-label" layout="row" layout-align="start center"><span flex="50">NGC-US Finance Documents </span>
+          <button flex="35" class="download">DOWNLOAD GROUP <span>22.5 Mb</span></button>
+        </li>
+      </ul>
+    </div>
+  </label>
+  <article>
+    <p flex="50">{{link.content}}estias quam facilis ipsum ab aspernatur ut similique aperiam nemo tempore earum esse
+      repellat provident eum blanditiis
+      tempora molestiae! Optio, asperiores neque nam reiciendis ad rerum.</p>
+  </article>
+  </accordion-group>
+</accordion>-->

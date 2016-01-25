@@ -6,6 +6,8 @@ import { Http, HTTP_PROVIDERS } from 'angular2/http';
 import { AuthConfig, AuthHttp } from 'angular2-jwt';
 
 import { App } from './app/app';
+import { sidenavAccordion } from './components/sidenav-accordion/app';
+import { contentAccordion } from './components/content-accordion/app';
 
 bootstrap(
   App,
@@ -23,3 +25,5 @@ bootstrap(
     })
   ]
 );
+bootstrap(sidenavAccordion);
+bootstrap(contentAccordion);

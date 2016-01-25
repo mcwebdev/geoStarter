@@ -1,0 +1,37 @@
+<accordion close-others="false">
+<!--dynamic groups -->
+  <accordion-group [heading]="group.heading" [subHeading]="group.subHeading" *ngFor="#group of groups">
+
+
+    <div class="inner-accordion">
+
+
+      <accordion-group [heading]="subgroup.heading" [content]="subgroup.content" [subHeading]="subgroup.subHeading" *ngFor="#subgroup of subgroups">
+
+        {{subgroup.content}}
+      </accordion-group>
+
+
+
+
+      <!--static entries-->
+
+      <!-- <accordion-group heading="Another inner static group" class="radius-top sub-item">
+        This is the content
+      </accordion-group>
+
+      <accordion-group heading="Another inner static group" class="radius-bottom sub-item">
+        More content
+      </accordion-group>-->
+    </div>
+
+  </accordion-group>
+
+
+</accordion>
+
+
+
+
+
+
