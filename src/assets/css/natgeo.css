@@ -25,3 +25,24 @@
 .icon-natGeo_Reel:before{content:'\0045';}
 .icon-natgeoNextArrow:before{content:'\0046';}
 .icon-natgeoX:before{content:'\0047';}
+.icon-natgeoBackArrow:before{content:'\0048';}
+.icon-natgeoUpArrow:before{content:'\0049';}
+.icon-natgeoNextArrow:before{content:'\004a';}
+
+.fa-caret-right:before {
+  font-family: 'Glyphter';
+  content: "\0046";
+}
+
+.fa-remove:before, .fa-close:before, .fa-times:before {
+  font-family: 'Glyphter';
+  content: "\0047";
+}
+
+.fa-caret-left:before {
+  font-family: 'Glyphter';
+  content: "\0048";
+}
+
+
+.menu-list .icon-logo_square{font-size: 32px;}
