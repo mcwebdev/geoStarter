@@ -13,6 +13,7 @@
     "src/home/home.ts",
     "src/components/sidenav-accordion/app.ts",
     "src/components/content-accordion/app.ts",
+    "src/components/finance/app.ts",
     "src/login/login.ts",
     "src/signup/signup.ts",
     "src/index.ts",
