@@ -14,7 +14,7 @@ export class HomeComponent {}
 // Product Details Component
 @Component({
   selector: 'product',
-  template: '<h1 class="product">Test Detail Component</h1>',
+  templateUrl: 'src/components/finance/app.html',
   styles: ['.product {background: cyan}']
 })
 export class ProductDetailComponent {}
